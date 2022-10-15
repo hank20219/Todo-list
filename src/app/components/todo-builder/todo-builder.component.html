@@ -1,0 +1,18 @@
+<div>
+  <a
+    class="add_btn"
+    [ngClass]="!this.description.valid ? 'disabled' : ''"
+    (click)="add()"
+    >+</a
+  >
+  <input
+    type="text"
+    [formControl]="description"
+    placeholder="Add new task"
+    [ngClass]="
+      !this.description.valid && this.description.touched ? 'warning' : ''
+    "
+    (keydown.enter)="add()"
+    #input
+  />
+</div>

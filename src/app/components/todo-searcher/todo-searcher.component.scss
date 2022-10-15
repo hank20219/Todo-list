@@ -1,0 +1,19 @@
+:host {
+  * {
+    vertical-align: middle;
+  }
+  input {
+    width: 80%;
+    padding: 5px;
+    margin: 1px;
+    margin-left: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .material-symbols-outlined {
+    user-select: none;
+  }
+  .clear_btn {
+    cursor: pointer;
+  }
+}

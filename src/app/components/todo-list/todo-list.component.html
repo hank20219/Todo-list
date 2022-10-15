@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="header">
+    <h1>To-do</h1>
+    <todo-searcher (search)="search($event)"></todo-searcher>
+  </div>
+  <div class="body">
+    <div class="list_title">
+      <div class="left_title_group">
+        <span
+          class="material-symbols-outlined"
+          [ngClass]="
+            filterMode.value !== FilterMode.None
+              ? 'filter_btn'
+              : 'filter_off_btn'
+          "
+          (click)="toggleFilter()"
+        >
+          {{
+            filterMode.value !== FilterMode.None
+              ? 'filter_list_off'
+              : 'filter_list'
+          }}
+        </span>
+        <select
+          [@toggle]="filterMode.value !== FilterMode.None ? 'show' : 'hide'"
+          [formControl]="filterMode"
+        >
+          <option [ngValue]="FilterMode.ShowTodo">Todo</option>
+          <option [ngValue]="FilterMode.ShowCompleted">Completed</option>
+        </select>
+      </div>
+      <div class="right_title_group">
+        <span
+          class="material-symbols-outlined sort_btn"
+          [ngClass]="descending ? 'descending' : 'ascending'"
+          (click)="changeSort()"
+          >sort
+        </span>
+      </div>
+    </div>
+    <todo-item
+      *ngFor="let item of todoList; let i = index"
+      [hidden]="checkItemInvisibility(item)"
+      [data]="item"
+      (descriptionChanged)="descriptionChange($event, i)"
+      (deleted)="delete(i)"
+      (statusChanged)="statusChange($event, i)"
+    >
+    </todo-item>
+    <todo-builder (taskAdded)="addTask($event)"></todo-builder>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+:host {
+  .container {
+    max-width: 500px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5%;
+    padding-top: calc(5vh - 16px);
+    margin: auto;
+    .body {
+      padding-bottom: 5vh;
+    }
+  }
+  .material-symbols-outlined {
+    vertical-align: middle;
+    width: 24px;
+    user-select: none;
+  }
+  .list_title {
+    text-align: right;
+    padding: 0 12px 0 9px;
+    display: flex;
+    justify-content: space-between;
+    select {
+      border: none;
+      border-bottom: 1px solid #333;
+      transform-origin: left;
+    }
+    span {
+      cursor: pointer;
+      &.filter_btn,
+      .filter_off_btn {
+        color: #888;
+      }
+      &.sort_btn {
+        color: #888;
+        &.ascending {
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }
+}

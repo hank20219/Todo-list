@@ -1,0 +1,39 @@
+:host {
+  .todo-item {
+    background-color: #fcae1e;
+    min-width: 50%;
+    max-width: 100%;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 1px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+
+    &.complete {
+      background-color: #ccc;
+      span:not(.material-symbols-outlined) {
+        text-decoration: line-through;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    span {
+      width: calc(100% - 81px);
+    }
+    .material-symbols-outlined {
+      color: #333;
+      text-decoration: none;
+      vertical-align: middle;
+      width: 24px;
+      user-select: none;
+    }
+    .edit_btn,
+    .delete_btn {
+      cursor: pointer;
+    }
+  }
+}

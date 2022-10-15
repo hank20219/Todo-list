@@ -1,0 +1,24 @@
+<div
+  class="todo-item"
+  [ngClass]="data.isCompleted ? 'complete' : ''"
+  [formGroup]="formGroup"
+>
+  <input type="checkbox" formControlName="isCompleted" />
+  <span [hidden]="editMode" (click)="toggleEditMode()">{{
+    data.description
+  }}</span>
+  <span
+    [hidden]="!editMode"
+    formControlName="description"
+    contenteditable="plaintext-only"
+    spellcheck="false"
+    (keydown.enter)="toggleEditMode()"
+    #descriptionEditor
+  ></span>
+  <span class="material-symbols-outlined edit_btn" (click)="toggleEditMode()">{{
+    editMode ? 'done' : 'edit'
+  }}</span>
+  <span class="material-symbols-outlined delete_btn" (click)="deleted.emit()">
+    delete_forever
+  </span>
+</div>

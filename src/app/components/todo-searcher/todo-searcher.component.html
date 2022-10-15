@@ -1,0 +1,14 @@
+<div>
+  <span class="material-symbols-outlined">search</span>
+  <input
+    type="text"
+    [formControl]="value"
+    placeholder="Search by description"
+  />
+  <a
+    *ngIf="value.value"
+    class="material-symbols-outlined clear_btn"
+    (click)="clear()"
+    >close</a
+  >
+</div>
