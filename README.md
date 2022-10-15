@@ -1,5 +1,7 @@
 # todo-list
 
+![image](https://github.com/hank20219/todo-list/blob/master/Showcase.png)
+
 ## Live demo with StackBlitz
 
 ### Steps to run live demo
