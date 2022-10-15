@@ -4,13 +4,21 @@
 
 ### Steps to run live demo
 
-1. [Edit in StackBlitz ⚡️](https://stackblitz.com/edit/node-wo4pak)
+1. Open [Edit in StackBlitz ⚡️](https://stackblitz.com/edit/node-wo4pak)
 2. Run the following commands in opened IDE Terminal:
 
 ```
 cd todo-list
 npm i
 ng serve
+```
+
+### Steps to run testing on live demo
+
+```
+cd todo-list
+npm i
+ng test --code-coverage
 ```
 
 ## Environment
@@ -21,12 +29,13 @@ node.js v16.14.2
 ## Build demo
 
 ```
-cd todo-list
 npm i
 ng serve
 ```
 
 ## Codebase
+
+![image](https://github.com/hank20219/todo-list/blob/master/Codebase.png)
 
 ### /todo-list/src/app
 
