@@ -23,6 +23,7 @@
 
     span {
       width: calc(100% - 81px);
+      overflow-wrap: break-word;
     }
     .material-symbols-outlined {
       color: #333;
